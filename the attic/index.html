@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="/images/bunny.png">
+    <title>The attic</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button data-modal-target="#modal" id="openbtn">?</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Game info</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        Controls: Move left and righ with arrows: ← → . Jump with arrow up: ↑ . Stop moving with arrow down ↓ . Hold Shift to kill enemies: ⇧ .
+        <br><br>
+        Goal: Kill 20 enemies before it's midnight. Be carefull you have only 35 seconds to achieve your goal.
+        <br><br>
+        Game play: You can turn to a ball of star dust (when holding Shift) only when you have enough stamina. You can recharge it when you are out of the state, but then you are vulnerable to hits.
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+    <div class = "card">
+        <button onclick="startGame(), restartGame()" id="switch" class ="play"> Start </button>
+        <button onclick="pauseGame()" class ="pause"> Pause </button>
+     </div>
+    
+    <canvas id="canvas1"></canvas>
+
+    <img id="player" src="/images/player.png">
+    <img id="layer1" src="/images/layer-1.png">
+    <img id="layer2" src="/images/layer-2.png">
+    <img id="layer3" src="/images/layer-3.png">
+    <img id="layer4" src="/images/layer-4.png">
+    <img id="layer5" src="/images/layer-5.png">
+    <img id="enemy_fly" src="/images/enemy_fly.png">
+    <img id="enemy_plant" src="/images/enemy_plant.png">
+    <img id="enemy_spider" src="/images/enemy_spider_big.png">
+    <img id="fire" src="/images/fire.png">
+    <img id="collisionAnimation" src="/images/boom.png">
+    <img id="lives" src="/images/heart.png">
+    <img id="game_over" src="/images/game_over.png">
+    <img id="game_won" src="/images/game_won.png">
+    <img id="begining_screen" src="/images/begining_scren.png">
+
+    <script src="./js/background.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/player.js"></script>
+    <script src="./js/playerStates.js"></script>
+    <script src="./js/collisionAnimation.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/popUp.js"></script>
+    <script src="./js/enemies.js"></script>
+    <script src="./js/input.js"></script>
+
+</body>
+</html> 

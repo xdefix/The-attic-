@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    /* margin:50px auto; */
+    object-position: center;
+    font-family: 'VT323', monospace;
+}
+
+#canvas1 {
+    border: 5px solid #001720;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+body {
+    background: linear-gradient(to right,#00384e ,#368ABF);  
+}
+
+#player, #layer1, #layer2, #layer3, #layer4, #layer5, #enemy_fly, #enemy_plant, #enemy_spider, #fire, #collisionAnimation, #lives, #gameOverWin, #game_over, #game_won, #begining_screen{
+    display: none;
+}
+
+button{
+    background-color: #CCB76A;
+    color: #0388A6;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 32px 12px;
+    display: inline-block;
+    box-shadow: inset 0px 0px 10px -3px #5E5E5E;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #D7CEA8;
+}
+button:active{
+    transform: scale(0.95);
+}
+
+p{
+    color: #731f2e;
+    text-shadow: #400d11;
+    margin-top:500px;
+    background-color: #D7CEA8;
+    width: 910px;
+    border-color: #CCB76A;
+    border-radius: 20px;
+}
+
+.play{
+    margin:100px auto;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.pause{
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modal {
+    color: #CCB76A;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid #001720;
+    border-radius: 20px;
+    z-index: 10;
+    background-color: #003b52;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #001720;
+}
+
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 15px;
+    font-size: larger;
+    padding: 10px 15;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: -50px; 
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 9;
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+#openbtn{
+    font-size:x-large;
+    border-radius: 20px;
+    position: fixed;
+    top: 5px;
+    cursor: pointer;
+    left: 5px;
+}
